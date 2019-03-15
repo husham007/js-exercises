@@ -21,66 +21,66 @@
       const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
       const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-      //Q2
+      //Q2 Use forEach to console.log each country in the countries array.
       countries.forEach(element => {
         console.log(element);
       });
 
-      //Q3
+      //Q3 Use forEach to console.log each name in the names array.
       names.forEach(element => {
         console.log(element);
       });
 
-      //Q4
+      //Q4 Use forEach to console.log each number in the numbers array.
       numbers.forEach(element => {
         console.log(element);
       });
 
-      //Q5
+      //Q5 Use map to create a new array by changing each country to uppercase in the countries array;
       const upperCaseCountries = countries.map(country => {
         return country.toUpperCase();
       });
       console.log(upperCaseCountries);
 
-      //Q6
+      //Q6 Use map to create a new array by changing each number to square in the numbers array
       const squaredNumbers = numbers.map(number => {
         return number * number;
       });
       console.log(squaredNumbers);
 
-      //Q7
+      //Q7 Use map to change to each name to uppercase in the names array
       const upperCaseNames = names.map(name => {
         return name.toLocaleUpperCase();
       });
       console.log(upperCaseNames);
 
-      //Q8
+      //Q8 Use filter to filter out countries containing land.
 
       const countriesWithLand = countries.filter(country => {
         return country.includes("land");
       });
       console.log(countriesWithLand);
 
-      //Q9
+      //Q9 Use filter to filter out countries having six character.
 
       const countriesWithSixLetters = countries.filter(country => {
         return country.length === 6;
       });
       console.log(countriesWithSixLetters);
 
-      //Q10
+      //Q10 Use filter to filter out countries containing six letters and more in the counntry array.
       const countriesWithMoreThanSix = countries.filter(country => {
         return country.length > 6;
       });
       console.log(countriesWithMoreThanSix);
 
-      //Q11
+      //Q11 Use filter to filter out country start with 'E';
       const countriesStartWithE = countries.filter(country => {
         return country.startsWith("e") || country.startsWith("E");
       });
       console.log(countriesStartWithE);
 
-      //Q12
+      //Q12 Declare a function called getStringLists which takes an array as a parameter and then returns an array only with string items.
       const mixedArray = [1, "abc", 2, "edc", 343, "hen"];
       const stringsList = array => {
         return array.filter(item => {
@@ -89,7 +89,7 @@
       };
       console.log(stringsList(mixedArray));
 
-      //Q13
+      //Q13 Use reduce to sum all the numbers in the numbers array.
       let sum = 0;
       console.log(numbers);
       const sumAllNumbers = numbers.reduce((sum, number) => {
@@ -97,7 +97,7 @@
       }, 0);
       console.log(sumAllNumbers);
 
-      //Q16
+      //Q16 Use reduce to concatinate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and IceLand are north European countries
       countries = [
         "Estonia",
         "Finland",
@@ -120,14 +120,14 @@
 
       console.log(northEU);
 
-      //Q18
+      //Q18 Use some to check if some names' length greater than seven in names array
       const q18 = names.some(name =>{
         return name.length >7 ;
       });
 
       console.log(q18);
 
-      //Q19
+      //Q19 Use every to check if all the countries contain the word land
       const q19 = countries.every(name =>{
         return name.includes('land');
       });
