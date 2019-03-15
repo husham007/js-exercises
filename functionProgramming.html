@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Functional programming</title>
+  </head>
+  <body>
+    <div class="wrapper"></div>
+
+    <script>
+      let countries = [
+        "Estonia",
+        "Finland",
+        "Sweden",
+        "Denmark",
+        "Norway",
+        "Iceland"
+      ];
+      const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
+      const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+      //Q2
+      countries.forEach(element => {
+        console.log(element);
+      });
+
+      //Q3
+      names.forEach(element => {
+        console.log(element);
+      });
+
+      //Q4
+      numbers.forEach(element => {
+        console.log(element);
+      });
+
+      //Q5
+      const upperCaseCountries = countries.map(country => {
+        return country.toUpperCase();
+      });
+      console.log(upperCaseCountries);
+
+      //Q6
+      const squaredNumbers = numbers.map(number => {
+        return number * number;
+      });
+      console.log(squaredNumbers);
+
+      //Q7
+      const upperCaseNames = names.map(name => {
+        return name.toLocaleUpperCase();
+      });
+      console.log(upperCaseNames);
+
+      //Q8
+
+      const countriesWithLand = countries.filter(country => {
+        return country.includes("land");
+      });
+      console.log(countriesWithLand);
+
+      //Q9
+
+      const countriesWithSixLetters = countries.filter(country => {
+        return country.length === 6;
+      });
+      console.log(countriesWithSixLetters);
+
+      //Q10
+      const countriesWithMoreThanSix = countries.filter(country => {
+        return country.length > 6;
+      });
+      console.log(countriesWithMoreThanSix);
+
+      //Q11
+      const countriesStartWithE = countries.filter(country => {
+        return country.startsWith("e") || country.startsWith("E");
+      });
+      console.log(countriesStartWithE);
+
+      //Q12
+      const mixedArray = [1, "abc", 2, "edc", 343, "hen"];
+      const stringsList = array => {
+        return array.filter(item => {
+          return typeof item === "string";
+        });
+      };
+      console.log(stringsList(mixedArray));
+
+      //Q13
+      let sum = 0;
+      console.log(numbers);
+      const sumAllNumbers = numbers.reduce((sum, number) => {
+        return (sum = sum + number);
+      }, 0);
+      console.log(sumAllNumbers);
+
+      //Q16
+      countries = [
+        "Estonia",
+        "Finland",
+        "Sweden",
+        "Denmark",
+        "Norway",
+        "Iceland"
+      ];
+      console.log(countries);
+      
+      const northEU = countries.reduce((northCountries, country, index) => {
+          //console.log('index', index);
+        if (index === countries.length-1) {
+            //console.log('if');
+          return (northCountries = northCountries + "and " + country  + 'are north European countries.');
+        } 
+          return northCountries + country + ", ";
+        
+      }, '');
+
+      console.log(northEU);
+
+      //Q18
+      const q18 = names.some(name =>{
+        return name.length >7 ;
+      });
+
+      console.log(q18);
+
+      //Q19
+      const q19 = countries.every(name =>{
+        return name.includes('land');
+      });
+
+      console.log(q19);
+
+
+     
+    </script>
+  </body>
+</html>
